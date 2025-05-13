@@ -1,0 +1,3707 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+#banner {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), #144), url(./section-1/sec-1-back.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* navbar */
+.img-1 {
+    box-shadow: 5px 5px 30px rgb(16, 185, 185);
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    position: relative;
+    top: 1%;
+    right: 50px;
+}
+
+.name {
+    position: relative;
+    font-size: 30px;
+    left: 12.8%;
+    color: snow;
+}
+
+.urgent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hide {
+    margin-right: 100px;
+}
+
+.hide li {
+    text-shadow: 2px 2px 5px black,
+        2px 2px 5px black,
+        2px 2px 15px black;
+    width: auto;
+    position: relative;
+}
+
+.hide li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgb(3, 194, 194);
+    transition: 0.3s ease-in-out;
+}
+
+.hide li:hover::after {
+    width: 100%;
+}
+
+
+.nav {
+    height: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.urgent li {
+    margin-left: 30px !important;
+    margin-top: 30px;
+    font-size: 22px !important;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.urgent ul {
+    display: flex;
+    gap: 20px;
+
+}
+
+#navbar ul li {
+    list-style-type: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* small screen button navbar */
+#navigation ul {
+    display: block !important;
+}
+
+
+#navigation {
+    height: 100vh;
+    width: 200px;
+    background: #144;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    transition: right 0.5s ease;
+    z-index: 1;
+}
+
+#navigation ul li {
+    color: snow;
+    margin: 100px 0px 0px 25%;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+
+#navigation ul li:active {
+    color: rgb(16, 185, 185);
+}
+
+
+
+#menubtn {
+    display: none;
+}
+
+/* Menu Button */
+#menuButton {
+    z-index: 2;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13%;
+    color: #090909;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 0.5em;
+    background: #144;
+    border: 1px solid #171717;
+    transition: all 0.3s;
+    box-shadow: inset 4px 4px 12px #3a3a3a, inset -4px -4px 12px #000000;
+}
+
+#menuButton:hover {
+    border: 1px solid #144;
+}
+
+#menuButton:active {
+    color: #666;
+    box-shadow: 6px 6px 12px #3a3a3a, -6px -6px 12px #144;
+}
+
+input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+#menuButton span {
+    width: 30px;
+    height: 4px;
+    background: rgb(200, 200, 200);
+    border-radius: 100px;
+    transition: 0.3s ease;
+}
+
+input[type="checkbox"]:checked~span.top {
+    transform: translateY(290%) rotate(45deg);
+    width: 40px;
+}
+
+input[type="checkbox"]:checked~span.bot {
+    transform: translateY(-270%) rotate(-45deg);
+    width: 40px;
+    box-shadow: 0 0 10px #495057;
+}
+
+input[type="checkbox"]:checked~span.mid {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    #menubtn {
+        display: block;
+    }
+
+    .hide {
+        display: none !important;
+    }
+}
+
+/* banner section */
+#bannercontent {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    height: auto;
+}
+
+.text-box {
+    color: snow;
+    font-size: 60px;
+    line-height: 7rem;
+}
+
+.dl-btn {
+    padding: 25px 90px;
+    border-radius: 15px;
+    background-color: snow;
+    font-size: 22px;
+    border: none;
+    transition: 0.4s ease;
+}
+
+.dl-btn:hover {
+    color: snow;
+    background: #144;
+    box-shadow:
+        2px 2px 40px rgb(22, 184, 184);
+}
+
+
+/* Features section */
+
+#Features {
+    height: 100vh;
+    /* height: auto; */
+    width: 100%;
+    color: black;
+}
+
+.head {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.head p {
+    font-weight: bold;
+    position: relative;
+}
+
+.head h1 {
+    font-size: 60px;
+}
+
+.head p::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    content: "";
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(#019578, #fff);
+    position: absolute;
+    top: -80%;
+    transform: rotate(10deg);
+    z-index: -1;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+/* features content */
+
+.Features-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+    height: 100vh;
+}
+
+.content {
+    margin-left: 5%;
+}
+
+.edit {
+    display: flex;
+    width: 80%;
+    margin-top: 15px;
+}
+
+.content h2 {
+    margin-top: 30px;
+    color: #489689;
+}
+
+.edit p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 15px;
+}
+
+.content h2 {
+    font-size: 30px;
+}
+
+.content img {
+    height: 4rem;
+    width: 4rem;
+}
+
+.content-img {
+    margin-right: 60px;
+
+}
+
+.content-img img {
+    border: none;
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+
+/* service section */
+#Services {
+    height: auto;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.205);
+    box-sizing: border-box;
+}
+
+
+
+.head {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.head p {
+    font-weight: bold;
+    position: relative;
+    font-size: 30px;
+}
+
+.head h1 {
+    font-size: 60px;
+}
+
+.head p::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    content: "";
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(#019578, #fff);
+    position: absolute;
+    top: -70%;
+    transform: rotate(10deg);
+    z-index: -1;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+
+/* services contant */
+
+
+.single-service {
+    /* flex-basis: 27%; */
+    position: relative;
+    height: 350px;
+    width: 500px;
+    color: white;
+    margin: 10px;
+    overflow: hidden;
+    /* To prevent overlay from spilling outside */
+    border-radius: 20px;
+}
+
+.single-service img {
+    height: 100%;
+    /* Make the image fill the single-service container */
+    width: 100%;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0, 0.1), #144);
+    /* A dark overlay color for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 20px;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-deccript {
+    text-align: center;
+    color: white;
+    width: 80%;
+}
+
+.service-deccript h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.service-deccript p {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+hr {
+    margin: 15px auto;
+    border: 0;
+    height: 3px;
+    background: #fff;
+}
+
+.iner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* feedback section */
+
+#feedback {
+
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.feed-head p::after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    content: "";
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(#019578, #fff);
+    position: absolute;
+    top: -4%;
+    transform: rotate(10deg);
+    z-index: -1;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+
+
+.feed-head {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.clint-says {
+    display: flex;
+    position: relative;
+    top: 100px;
+    margin-left: 7%;
+}
+
+.says h2 {
+    display: inline;
+    font-family: "Kaushan Script", cursive;
+
+}
+
+.says {
+    margin-left: 50px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 6px 5px grey;
+    height: 300px;
+    width: 400px;
+    margin-bottom: 50px;
+    text-align: center;
+    background: rgb(200, 200, 200);
+    transition: all ease-in-out 0.3s;
+}
+
+.c-p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.t-1 {
+    margin-bottom: 10px;
+}
+
+.says:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+.service-2 p {
+    font-size: 30px;
+}
+
+.service-2 h1 {
+    font-size: 50px;
+
+}
+
+
+/* contact us */
+#contact {
+    height: 100vh;
+    background-image: url(./section-5/barbershop-background-for-men-beauty-salon-hairdresser-tools-scissors-razor-comb-copy-space-2AP4GYE\ \(1\).jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #efefef;
+}
+
+.three-s {
+    font-weight: 900 !important;
+    text-shadow: 2px 2px 12px black,
+        2px 2px 12px black,
+        2px 2px 22px black;
+    margin-top: 40px;
+    font-size: 50px !important;
+}
+
+.contact-head p,
+h1 {
+    text-align: center;
+}
+
+.fa-clock {
+    color: #009688;
+    text-shadow: 2px 2px 12px black,
+        2px 2px 12px black,
+        2px 2px 12px black,
+        2px 2px 12px black;
+}
+
+.parent {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent p {
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.one {
+    margin-left: 40px;
+    text-shadow: 3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black;
+}
+
+.two {
+    text-shadow: 3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black,
+        3px 3px 10px black;
+    margin-right: 40px;
+}
+
+/* footer section */
+.fa-facebook {
+    border-radius: 50%;
+    transition: 0.5s ease;
+    padding: 1px;
+    border: none;
+    padding: 15px;
+    background-color: #144;
+    box-shadow: 2px 2px 20px #009688,
+        2px 2px 20px #009688,
+        2px 2px 20px #009688;
+    color: snow;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.fa-twitter {
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #144;
+    box-shadow: 2px 2px 20px #009688,
+        2px 2px 20px #009688,
+        2px 2px 20px #009688;
+    color: snow;
+    transition: 0.5s ease;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.fa-facebook:hover {
+    background-color: blue;
+    transform: scale(1.3, 1.3);
+    transition: all 0.2s ease;
+}
+
+
+
+.fa-twitter:hover {
+    color: skyblue;
+    background: snow;
+    transform: scale(1.3, 1.3);
+    transition: all 0.2s ease;
+}
+
+.fa-whatsapp {
+    padding: 15px;
+    border: none;
+    background-color: #144;
+    box-shadow: 2px 2px 20px #009688,
+        2px 2px 20px #009688,
+        2px 2px 20px #009688;
+    color: snow;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.5s ease;
+    font-size: 40px;
+    border-radius: 50%;
+    margin: 20px;
+    font-size: 40px;
+}
+
+.fa-whatsapp:hover {
+    background: green;
+    transform: scale(1.3, 1.3);
+    transition: all 0.2s ease;
+}
+
+.fa-instagram {
+    border-radius: 50%;
+    margin: 20px;
+    padding: 15px;
+    transition: 0.5s ease;
+    border: none;
+    background-color: #144;
+    box-shadow: 2px 2px 20px #009688,
+        2px 2px 20px #009688,
+        2px 2px 20px #009688;
+    color: snow;
+    font-size: 40px;
+}
+
+.fa-instagram:hover {
+    transition: all 0.2s ease;
+    background: linear-gradient(purple, red);
+    transform: scale(1.3, 1.3);
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+
+}
+
+.img-w {
+    box-shadow: 3px 3px 20px #019578,
+        3px 3px 20px black,
+        3px 3px 20px #019578,
+        3px 3px 20px white,
+        3px 3px 60px #177;
+}
+
+
+.says img {
+    border-radius: 30px;
+}
+
+
+/* responnsive small to large */
+/* Small screens (up to 575.98px) */
+
+@media screen and (max-width: 1310px) {
+    #navbar .name {
+        margin-left: 1%;
+        position: absolute;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        margin: auto;
+    }
+
+    .handler .head {
+        margin-top: 5%;
+    }
+
+    /* feedback */
+
+    .clint-says {
+        margin-right: 10%;
+
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    #navbar .name {
+        margin-left: 3%;
+        position: absolute;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+
+
+    .edit {
+        margin-top: 2px;
+        margin-bottom: -10px;
+    }
+
+    .edit p:nth-child(2) {
+        margin-right: 20px;
+    }
+
+
+
+    .content-img img {
+        border: none;
+        height: 600px;
+        width: 380px;
+        border-radius: 20px;
+        margin-left: 10%;
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+
+
+    .handler .head {
+        margin-top: 15%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 45%;
+        position: relative;
+        height: 350px;
+        width: 500px;
+        color: white;
+        margin: 10px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 17%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    #navbar .name {
+        margin-left: 3%;
+        position: absolute;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+
+
+    .edit {
+        margin-top: 2px;
+        margin-bottom: -10px;
+    }
+
+    .edit p:nth-child(2) {
+        margin-left: -0px;
+    }
+
+
+
+    .content-img img {
+        border: none;
+        height: 630px;
+        width: 380px;
+        margin-top: 20px;
+        border-radius: 20px;
+        margin-left: 10%;
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+
+
+    .handler .head {
+        margin-top: 15%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 45%;
+        position: relative;
+        height: 350px;
+        width: 500px;
+        color: white;
+        margin: 10px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 17%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    #navbar .name {
+        margin-left: 6%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -30px;
+        font-size: 50px;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: center;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 500px;
+        width: 400px;
+        border-radius: 20px;
+        margin-left: 10%;
+        /* margin: auto; */
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 70%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 300px;
+        /* width: 500px; */
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 15%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+    .parent .one {
+        margin-right: 120px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 882px) {
+    #navbar .name {
+        margin-left: 6%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -30px;
+        font-size: 50px;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: center;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 400px;
+        width: 350px;
+        border-radius: 20px;
+        margin-left: 10%;
+        /* margin: auto; */
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 50%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 300px;
+        /* width: 500px; */
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 13%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+    .parent .one {
+        margin-right: 120px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    #navbar .name {
+        margin-left: 6%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -30px;
+        font-size: 50px;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: center;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 400px;
+        width: 350px;
+        border-radius: 20px;
+        margin-left: 10%;
+        /* margin: auto; */
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 70%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 300px;
+        /* width: 500px; */
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 10%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        text-align: center;
+        margin-top: 30px;
+        position: relative;
+    }
+    
+    .contact-head .three-s {
+        font-size: 35px !important;
+    }
+    
+    .parent .one:first-child
+    {
+        margin-left: 25px !important;
+        text-align: start;
+        font-size: 16px;
+        margin: 3px;
+    }
+    .parent .two:first-child
+    {
+        text-align:end;
+        font-size: 16px;
+    }
+    .parent .two p{
+        text-align: end;
+    }
+    .parent .two {
+        margin-left: 55%;
+        position: absolute;
+        margin-top:  160px;
+        
+    }
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        margin-top: 200px;
+        padding: 14px;
+        font-size: 32px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 770px) {
+    #navbar .name {
+        margin-left: 6%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -30px;
+        font-size: 50px;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        /* margin-left: -8%; */
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 10%;
+        /* margin: auto; */
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 60%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 300px;
+        /* width: 500px; */
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 10%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+    .parent .one {
+        margin-right: 120px;
+    }
+    .footer{
+        margin-top:10%;
+    }
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 670px) {
+    #navbar .name {
+        margin-left: 6%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -30px;
+        font-size: 50px;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        /* margin-left: -8%; */
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 10%;
+        /* margin: auto; */
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 70%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 300px;
+        /* width: 500px; */
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        flex-direction: column;
+        margin-left: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 23px;
+    }
+
+    .parent .one {
+        margin-right: 120px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 12px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 728px) {
+    #navbar .name {
+        margin-left: 7%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 45px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 10%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 14%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 45%;
+    }
+
+    .handler .head {
+        margin-top: 70%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 250px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 9%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    #navbar .name {
+        margin-left: 7%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+    #Features .head h1 ,.head p {
+        text-align: center;
+        font-size: 40px !important;    
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 80% !important;
+    }
+
+    /* services */
+
+    .head .font{
+        text-align: center;
+        font-size: 40px !important;
+    }
+    .single-service {
+        flex-basis: 55%;
+        position: relative;
+        height: 200px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    /* feedback */
+    
+    .says {
+        height: 100%;
+    }
+    
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+    
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 5%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 592px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        /* font-size: 24px !important; */
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 100% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 250px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 5%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 555px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 110% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 250px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 5%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    .parent .two {
+        margin-right: 30px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 512px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 120% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 250px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: -1%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    .parent .two {
+        margin-right: 30px;
+    }
+
+    .footer{
+        margin-top:20% !important;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+@media screen and (max-width: 517px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 120% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 250px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: -1%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    .parent .two {
+        margin-right: 30px;
+    }
+
+    .footer{
+        margin-top:20% !important;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 495px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 140% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 200px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: -1%;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    .parent .two {
+        margin-right: 30px;
+    }
+
+    .footer{
+        margin-bottom:-15%!important;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 482px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 160% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 200px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: -5% !important;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+    #navbar .name {
+        margin-left: 12%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .contact-head .foot {
+        margin-top: 50%;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 15%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 190% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 200px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        width: 70%;
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 6% !important;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 20px;
+    }
+
+    .parent .two {
+        margin-left: 60px !important ;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 398px) {
+    #navbar .name {
+        margin-left: 15%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 29px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .contact-head .foot {
+        margin-top: 50%;
+    }
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 20% !important;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 210% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 160px;
+        width: 500px;
+        color: white;
+        margin: 3px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        width: 70%;
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 6% !important;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 35px !important;
+        /* margin-bottom: 20px; */
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 17px;
+    }
+
+    .parent .two {
+        margin-left: -40px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    #navbar .name {
+        margin-left: 15%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 33px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 60px;
+        margin-top: 100px;
+    }
+
+    .contact-head .foot {
+        margin-top: 80%;
+    }
+    
+
+    .urgent img {
+        margin-left: 7%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 12%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 20% !important;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 40%;
+    }
+
+    .handler .head {
+        margin-top: 250% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 65%;
+        position: relative;
+        height: 160px;
+        width: 500px;
+        color: white;
+        margin: 3px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    /* feedback */
+
+    .says {
+        width: 70%;
+        height: 100%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        left: 6% !important;
+        flex-direction: column;
+        margin-right: 6%;
+
+    }
+
+    /* contact us */
+    .parent {
+        text-align: center;
+        margin-top: 30px;
+        position: relative;
+    }
+    
+    .contact-head .three-s {
+        font-size: 35px !important;
+    }
+    
+    .parent .one:first-child
+    {
+        text-align: start;
+        font-size: 16px;
+        margin: 3px;
+    }
+    .parent .two:first-child
+    {
+        text-align:end;
+        font-size: 16px;
+    }
+    .parent .two p{
+        text-align: end;
+    }
+    .parent .two {
+        position: absolute;
+        margin-top: 160px;
+        
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        margin-top: 200px;
+        padding: 8px;
+        font-size: 24px;
+    }
+
+}
+
+
+@media screen and (max-width: 349px) {
+    #navbar .name {
+        margin-left: 26%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 29px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 50px;
+        margin-top: 80px;
+    }
+
+    .urgent img {
+        margin-left: 14%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .head p,
+    h1 {
+        text-align: center !important;
+        font-size: 35px !important;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 16%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 26%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 32%;
+    }
+
+    .handler .head {
+        margin-top: 260%;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 100%;
+        position: relative;
+        height: 150px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    .head .font {
+        font-size: 1.9rem !important;
+
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+        width: 80%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        /* left: -5%; */
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: -7%;
+
+    }
+
+    .feed-head h1 {
+        font-size: 2.1rem;
+
+    }
+
+    /* contact us */
+    #contact {
+        margin-top: 60%;
+    }
+
+    .parent {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 33px !important;
+
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 16px;
+    }
+
+    .parent .two {
+        margin-left: 50px;
+    }
+
+    .parent .one {
+        margin-right: 20px;
+    }
+
+    .parent .one p {
+        margin-left: 0px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 22px;
+    }
+
+}
+@media screen and (max-width: 325px) {
+    #navbar .name {
+        margin-left: 26%;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 29px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 50px;
+        margin-top: 80px;
+    }
+
+    .urgent img {
+        margin-left: 14%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .head p,
+    h1 {
+        text-align: center !important;
+        font-size: 35px !important;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 16%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 26%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 32%;
+    }
+
+    .handler .head {
+        margin-top: 290% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 100%;
+        position: relative;
+        height: 150px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    .head .font {
+        font-size: 1.9rem !important;
+
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+        width: 80%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        /* left: -5%; */
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: -7%;
+
+    }
+
+    .feed-head h1 {
+        font-size: 2.1rem;
+
+    }
+
+    /* contact us */
+    #contact {
+        margin-top: 60%;
+    }
+
+    .parent {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 33px !important;
+
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 16px;
+    }
+
+    .parent .two {
+        margin-left: 50px;
+    }
+
+    .parent .one {
+        margin-right: 20px;
+    }
+
+    .parent .one p {
+        margin-left: 0px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 22px;
+    }
+
+}
+@media screen and (max-width: 290px) {
+    #navbar .name {
+        margin-left: 28%;
+        display: none;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 29px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 50px;
+        margin-top: 80px;
+    }
+
+    .urgent img {
+        margin-top: 50% !important;
+        margin-left: 50%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .head p,
+    h1 {
+        text-align: center !important;
+        font-size: 35px !important;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 16%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 26%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 32%;
+    }
+
+    .handler .head {
+        margin-top: 310% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 100%;
+        position: relative;
+        height: 150px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    .head .font {
+        font-size: 1.9rem !important;
+
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+        width: 80%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        /* left: -5%; */
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: -7%;
+
+    }
+
+    .feed-head h1 {
+        font-size: 2.1rem;
+
+    }
+
+    /* contact us */
+    #contact {
+        margin-top: 100%;
+    }
+
+    .parent {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 33px !important;
+
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 16px;
+    }
+
+    .parent .two {
+        margin-left: 50px;
+    }
+
+    .parent .one {
+        margin-right: 20px;
+    }
+
+    .parent .one p {
+        margin-left: 0px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 22px;
+    }
+
+}
+@media screen and (max-width: 277px) {
+    #navbar .name {
+        margin-left: 28%;
+        display: none;
+        position: absolute;
+    }
+
+    .text-box {
+        margin-top: -60px;
+        font-size: 29px;
+        line-height: 2;
+    }
+
+    .dl-btn {
+        padding: 15px 50px;
+        margin-top: 80px;
+    }
+
+    .urgent img {
+        margin-top: 50% !important;
+        margin-left: 50%;
+    }
+
+    /* feature */
+    .Features-content {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .head p,
+    h1 {
+        text-align: center !important;
+        font-size: 35px !important;
+    }
+
+    .edit {
+        width: 80%;
+        margin-top: 2px;
+        margin-bottom: -10px;
+        margin-left: 16%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .edit p {
+        text-align: justify;
+    }
+
+
+    .content-img img {
+        border: none;
+        height: 300px;
+        width: 220px;
+        border-radius: 20px;
+        margin-left: 26%;
+
+    }
+
+    .content-img {
+        margin-top: 23px;
+    }
+
+    .content img {
+        margin-left: 32%;
+    }
+
+    .handler .head {
+        margin-top: 350% !important;
+    }
+
+    /* services */
+
+
+    .single-service {
+        flex-basis: 100%;
+        position: relative;
+        height: 100px;
+        width: 500px;
+        color: white;
+        margin: 5px;
+        overflow: hidden;
+        /* To prevent overlay from spilling outside */
+        border-radius: 20px;
+    }
+
+    .head .font {
+        font-size: 1.9rem !important;
+
+    }
+
+    /* feedback */
+
+    .says {
+        height: 100%;
+        width: 80%;
+    }
+
+    .c-p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+    }
+
+
+    .clint-says {
+        flex-basis: 30%;
+        position: absolute;
+        /* left: -5%; */
+        flex-direction: column;
+        margin-right: 10%;
+        margin-left: -7%;
+
+    }
+
+    .feed-head h1 {
+        font-size: 2.1rem;
+
+    }
+
+    /* contact us */
+    #contact {
+        margin-top: 120%;
+    }
+
+    .parent {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-head .three-s {
+        font-size: 33px !important;
+
+    }
+
+    .parent .one p,
+    .two p {
+
+        font-size: 16px;
+    }
+
+    .parent .two {
+        margin-left: 50px;
+    }
+
+    .parent .one {
+        width: 70%;
+        margin-right: 0%;
+    }
+
+    .parent .one p {
+        margin-left: 0px;
+    }
+
+
+    .fa-twitter,
+    .fa-facebook,
+    .fa-instagram,
+    .fa-whatsapp {
+        padding: 8px;
+        font-size: 22px;
+    }
+
+}
+
+
